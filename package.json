@@ -1,0 +1,53 @@
+{
+  "name": "aidocx-mcp-server",
+  "mcpName": "io.github.aidocx/mcp-server",
+  "version": "0.5.1",
+  "description": "MCP server for AiDocX - Create, upload, and manage documents and presentation decks from AI assistants",
+  "type": "module",
+  "license": "MIT",
+  "author": "AiDocX <contact@aidocx.ai> (https://aidocx.ai)",
+  "homepage": "https://github.com/aidocx/mcp-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aidocx/mcp-server.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "aidocx",
+    "contract",
+    "proposal",
+    "quotation",
+    "resume",
+    "report",
+    "e-signature",
+    "document-management",
+    "pdf",
+    "presentation",
+    "pitch-deck",
+    "ir-deck",
+    "claude",
+    "ai-tools"
+  ],
+  "bin": {
+    "aidocx-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "NODE_OPTIONS=--max-old-space-size=8192 tsc",
+    "start": "node build/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.5.0",
+    "tsx": "^4.19.0"
+  }
+}

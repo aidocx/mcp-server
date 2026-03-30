@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.aidocx/mcp-server",
+  "description": "Create, upload, and manage business documents and AI-generated presentation decks from AI assistants. Includes document analysis, e-signatures, and deck creation.",
+  "repository": {
+    "url": "https://github.com/aidocx/mcp-server",
+    "source": "github"
+  },
+  "version": "0.5.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "aidocx-mcp-server",
+      "version": "0.5.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "AIDOCX_API_KEY",
+          "description": "API key for AiDocX (starts with ak_). Get it at https://app.aidocx.ai → Settings → API Keys",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
+        },
+        {
+          "name": "AIDOCX_API_SECRET",
+          "description": "API secret for AiDocX (64-char hex). Get it at https://app.aidocx.ai → Settings → API Keys",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
